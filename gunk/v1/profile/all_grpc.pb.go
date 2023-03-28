@@ -133,5 +133,5 @@ var ProfileService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "codemen.org/oms/gunk/v1/hrm/profile/all.proto",
+	Metadata: "github.com/DeepayanMallick/go-grpc/gunk/v1/hrm/profile/all.proto",
 }

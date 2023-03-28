@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.26.0
 // 	protoc        (unknown)
-// source: codemen.org/oms/gunk/v1/hrm/profile/all.proto
+// source: github.com/DeepayanMallick/go-grpc/gunk/v1/hrm/profile/all.proto
 
 package profile
 
