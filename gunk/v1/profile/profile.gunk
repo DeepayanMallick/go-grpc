@@ -1,0 +1,52 @@
+package profile
+
+import "time"
+
+type ProfileRequest struct {
+	UserID string `pb:"1" json:"user_id"`
+}
+
+type ProfileResponse struct {
+	ID          string `pb:"1" json:"id"`
+	FirstName   string `pb:"2" json:"first_name"`
+	LastName    string `pb:"3" json:"last_name"`
+	Email       string `pb:"4" json:"email"`
+	Mobile      string `pb:"5" json:"phone"`
+	Username    string `pb:"6" json:"username"`
+	Image       string `pb:"7" json:"image"`
+	FacebookURL string `pb:"8" json:"facebook_url"`
+	GithubURL   string `pb:"9" json:"github_url"`
+	TwitterURL  string `pb:"10" json:"twitter_url"`
+	Description string `pb:"11" json:"description"`
+}
+
+type ProfileUpdateRequest struct {
+	ID          string `pb:"1" json:"id"`
+	FirstName   string `pb:"2" json:"first_name"`
+	LastName    string `pb:"3" json:"last_name"`
+	Mobile      string `pb:"4" json:"phone"`
+	Image       string `pb:"5" json:"image"`
+	UserID      string `pb:"6" json:"user_id"`
+	FacebookURL string `pb:"7" json:"facebook_url"`
+	GithubURL   string `pb:"8" json:"github_url"`
+	TwitterURL  string `pb:"9" json:"twitter_url"`
+	Description string `pb:"10" json:"description"`
+}
+
+type ProfileUpdateResponse struct {
+	ID          string `pb:"1" json:"id"`
+	FirstName   string `pb:"2" json:"first_name"`
+	LastName    string `pb:"3" json:"last_name"`
+	Mobile      string `pb:"4" json:"phone"`
+	Image       string `pb:"5" json:"image"`
+	UserID      string `pb:"6" json:"user_id"`
+	FacebookURL string `pb:"7" json:"facebook_url"`
+	GithubURL   string `pb:"8" json:"github_url"`
+	TwitterURL  string `pb:"9" json:"twitter_url"`
+	Description string `pb:"10" json:"description"`
+}
+
+type ProfileService interface {
+	Profile(ProfileRequest) ProfileResponse
+	ProfileUpdate(ProfileUpdateRequest) ProfileUpdateResponse
+}
